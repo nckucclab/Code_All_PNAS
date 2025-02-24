@@ -6,7 +6,7 @@
 * Sep. 18, 2024.
 * Submit to PNAS
 *
-* Stata Code "Table2_pop.do" is used to generate Table A.2 in Appendix D of Supporting Information A. 
+* Stata Code "Table2_pop.do" is used to generate Table D.1 in Appendix D of Supporting Information A. 
 *
 ************************************************************
 
@@ -173,6 +173,6 @@ foreach v of global dy {
     	xtabond `v' dln_p_h dln_p_l l_dln_p_h l_dln_p_l year_c* l_year_c*, endo(l`v'_l, lag(0,1)) endo($dx_hl, lag(0,.)) inst(l(1/3).($dx_hl) l(2/3).(`v'_l)) maxldep(3) maxlags(3) pre(($dx_hl), lag(1,.))
 	eststo abond_h2_`v'_2g
 }
-esttab abond_h2_* using "TableA2_D_SI_A.csv", title(`esttitle') mtitle replace b(3) se(3) constant scalars(N r2_w r2_o r2_b p chi2 sigma_u sigma_e rho) star(+ 0.10 * 0.05 ** 0.01 *** 0.001 ) wide
+esttab abond_h2_* using "TableD1_D_SI_A.csv", title(`esttitle') mtitle replace b(3) se(3) constant scalars(N r2_w r2_o r2_b p chi2 sigma_u sigma_e rho) star(+ 0.10 * 0.05 ** 0.01 *** 0.001 ) wide
 
 
