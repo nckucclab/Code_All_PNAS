@@ -6,10 +6,10 @@
 * Sep. 18, 2024.
 * Submit to PNAS
 *
-* Stata Code "Table_A1_SR.do" 
+* Stata Code "Table_C_SR.do" 
 *   is used to report Governments’ Technological Capacities 
 *   for Various Democracy Groups
-*   in Table A.1 in Appendix C of Supporting Information A.
+*   in Table C in Appendix C of Supporting Information A.
 *
 ************************************************************
 
@@ -30,6 +30,6 @@ foreach y of varlist democ_score PR Total {
     eststo m_`v'
   }
   capture drop `y'g
-  esttab m_* using "modle_`y'a.csv", title(`esttitle') mtitle replace b(3) se(3) r2 ar2 constant scalars(N p ll_0 ll chi2) star(+ 0.10 * 0.05 ** 0.01 *** 0.001 ) wide
+  esttab m_* using "model_`y'a.csv", title(`esttitle') mtitle replace b(3) se(3) r2 ar2 constant scalars(N p ll_0 ll chi2) star(+ 0.10 * 0.05 ** 0.01 *** 0.001 ) wide
   eststo clear
 }

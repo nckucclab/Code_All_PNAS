@@ -6,10 +6,10 @@
 * Sep. 18, 2024.
 * Submit to PNAS
 *
-* Stata Code "FigureA1.do" is used for Figure A1 
+* Stata Code "FigureA1.do" is used for Figure C 
 *      "Governments’ Technological Capacities for 
 *       the Least (Blue) and Most (Red) Democratic Groups" in Appendix C of Supporting Information A.    
-* Then, run Python code "Figure A1.py" in the fold "Figure2_AI" to generate Figure A1.
+* Then, run Python code "Figure A1.py" in the fold "Figure2_AI" to generate Figure C.
 *
 ************************************************************
 
