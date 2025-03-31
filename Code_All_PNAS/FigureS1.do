@@ -3,13 +3,13 @@
 * by C. Y. Cyrus Chu, Academia Sinica; 
 *    Juin-Jen Chang, Academia Sinica; 
 *    Chang-Ching Lin, National Cheng Kung University.
-* Sep. 18, 2024.
+* Mar. 31, 2025.
 * Submit to PNAS
 *
-* Stata Code "FigureA1.do" is used for Figure C 
+* Stata Code "FigureS1.do" is used for Figure S1 
 *      "Governments’ Technological Capacities for 
 *       the Least (Blue) and Most (Red) Democratic Groups" in Appendix C of Supporting Information A.    
-* Then, run Python code "Figure A1.py" in the fold "Figure2_AI" to generate Figure C.
+* Then, run Python code "Figure S1.py" in the fold "Figure1_S1" to generate Figure S1.
 *
 ************************************************************
 
@@ -50,7 +50,7 @@ rename v2smgovcapsec Y229
 capture drop QQ 
 gen QQ = Q_EIU
 sort QQ year
-save "EIU_FigureA1.dta", replace
+save "EIU_FigureS1.dta", replace
 *** 
 
 * export excel using "EIU_FigureA1.xls", firstrow(variables) replace
@@ -91,7 +91,7 @@ rename v2smgovcapsec Y229P
 capture drop QQ 
 gen QQ = Q_PR
 sort QQ year
-save "PR_FigureA1.dta", replace
+save "PR_FigureS1.dta", replace
 ***
 
 * export excel using "PR_FigureA1.xls", firstrow(variables) replace
@@ -103,8 +103,8 @@ save "PR_FigureA1.dta", replace
 
 clear
 
-use "EIU_FigureA1.dta", clear
+use "EIU_FigureS1.dta", clear
 sort QQ year
-merge 1:1 QQ year using "PR_FigureA1.dta"
+merge 1:1 QQ year using "PR_FigureS1.dta"
 drop _merge QQ
-export excel using "FigureA1.xlsx", firstrow(variables) replace
+export excel using "FigureS1.xlsx", firstrow(variables) replace

@@ -3,10 +3,10 @@
 * by C. Y. Cyrus Chu, Academia Sinica; 
 *    Juin-Jen Chang, Academia Sinica; 
 *    Chang-Ching Lin, National Cheng Kung University.
-* Sep. 18, 2024.
+* Mar. 31, 2025.
 * Submit to PNAS
 *
-* Stata Code "Table_3.do" is used to generate Table 3: 
+* Stata Code "Table_3.do" is used to generate Table 3 (and Tables S9-1 and S9-2): 
 *      "Effects of the Government’s Implementation Practices on Democracy"   
 *
 ************************************************************

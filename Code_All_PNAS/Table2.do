@@ -3,10 +3,10 @@
 * by C. Y. Cyrus Chu, Academia Sinica; 
 *    Juin-Jen Chang, Academia Sinica; 
 *    Chang-Ching Lin, National Cheng Kung University.
-* Sep. 18, 2024.
+* Mar. 31, 2025.
 * Submit to PNAS
 *
-* Stata Code "Table_2.do" is used to generate Table 2: 
+* Stata Code "Table_2.do" is used to generate Table 2 (and Table S8): 
 *      "Governments’ Technological Capacities and 
 *       Their Actual Practices for Various Democracy Groups"   
 *

@@ -3,13 +3,13 @@
 * by C. Y. Cyrus Chu, Academia Sinica; 
 *    Juin-Jen Chang, Academia Sinica; 
 *    Chang-Ching Lin, National Cheng Kung University.
-* Sep. 18, 2024.
+* Mar. 31, 2025.
 * Submit to PNAS
 *
-* Stata Code "Figure2.do" is used for Figure 2: 
+* Stata Code "Figure1.do" is used for Figure 2: 
 *      "Governments’ Technological Capacities for Low (Blue) 
 *       and High (Red) Democracy Groups."   
-* Then, run Python code "Figure 2.py" in the fold "Figure2_AI" to generate Figure 2
+* Then, run Python code "Figure 2.py" in the fold "Figure2_S1" to generate Figure 2
 *
 ************************************************************
 
@@ -55,7 +55,7 @@ rename v2smgovcapsec Y229
 capture drop QQ 
 gen QQ = Q_EIU
 sort QQ year
-save "EIU_Figure2.dta", replace
+save "EIU_Figure1.dta", replace
 *** 
 
 * export excel using "EIU_Figure2.xls", firstrow(variables) replace
@@ -101,22 +101,22 @@ rename v2smgovcapsec Y229P
 capture drop QQ 
 gen QQ = Q_PR
 sort QQ year
-save "PR_Figure2.dta", replace
+save "PR_Figure1.dta", replace
 ***
 
-* export excel using "PR_Figure2.xls", firstrow(variables) replace
+* export excel using "PR_Figure1.xls", firstrow(variables) replace
 
 *****
 * Then, combine these two files and save as Figure2.xlsx
-*   and run Python code "Figure 2.py" in the fold "Figure2_AI" 
-*   to plot the average values of various capacities and democracy indices for each year in Figure 2.
+*   and run Python code "Figure 1.py" in the fold "Figure1_S1" 
+*   to plot the average values of various capacities and democracy indices for each year in Figure 1.
 *****
 
 clear
 
-use "EIU_Figure2.dta", clear
+use "EIU_Figure1.dta", clear
 sort QQ year
-merge 1:1 QQ year using "PR_Figure2.dta"
+merge 1:1 QQ year using "PR_Figure1.dta"
 drop _merge QQ
-export excel using "Figure2.xlsx", firstrow(variables) replace
+export excel using "Figure1.xlsx", firstrow(variables) replace
 

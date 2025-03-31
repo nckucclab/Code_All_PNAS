@@ -3,12 +3,12 @@
 * by C. Y. Cyrus Chu, Academia Sinica; 
 *    Juin-Jen Chang, Academia Sinica; 
 *    Chang-Ching Lin, National Cheng Kung University.
-* Sep. 18, 2024.
+* Mar. 31, 2025.
 * Submit to PNAS
 *
 * Stata Code "sum_and_xtunitroot.do" 
 *   is used to summarize data and conduct the panel data unitroot test.
-*   The results are reported in Table A of Appendix A and in Table B of Appendix B 
+*   The results are reported in Table S1 of Appendix A and in Table S2 of Appendix B 
 *   in Supporting Information A.
 *
 ************************************************************

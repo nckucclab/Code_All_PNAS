@@ -3,10 +3,10 @@
 * by C. Y. Cyrus Chu, Academia Sinica; 
 *    Juin-Jen Chang, Academia Sinica; 
 *    Chang-Ching Lin, National Cheng Kung University.
-* Sep. 18, 2024.
+* Mar. 31, 2025.
 * Submit to PNAS
 *
-* Stata Code "Table2_pop_2.do" is used to generate Table D.3 in Appendix D of Supporting Information A. 
+* Stata Code "Table2_pop_2.do" is used to generate Table S6 in Appendix D of Supporting Information A (and Table S12 in Appendix E).
 *
 ************************************************************
 

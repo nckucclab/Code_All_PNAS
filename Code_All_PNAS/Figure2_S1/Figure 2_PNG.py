@@ -1,6 +1,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib import rcParams
+
+plt.rcParams['font.family'] = 'Arial' 
+plt.rcParams['font.size'] = 8
+
 df = pd.read_excel('Figure2.xlsx')
 
 year = df['year'].values
@@ -161,9 +166,7 @@ colors = {
 #    'Group4': 'Reds'
 }
 
-plt.figure(figsize=(12, 8))
-
-fig, axs = plt.subplots(3, 2, figsize=(12, 12))
+fig, axs = plt.subplots(3, 2, figsize=(17.8/2.54, 22.5/2.54))
 
 # axs[0, 0].scatter(FH[i], Internet[i], s=sizes[i], color=cmap(norm(years[i])), alpha=0.9, edgecolors='w', linewidth=0.5)
 # axs[0, 0].set_xlabel('PR')
@@ -287,7 +290,10 @@ axs[2, 1].set_ylabel("Cyber Security (CS) Capacity ")
 # axs[2, 1].set_ylim(-0.7,0.9)
 axs[2, 1].grid(True)
 
-fig.savefig('Figure 2.png')
+plt.tight_layout()
+fig.savefig('Figure2.png', dpi=800)
+
+plt.show()
 
 ##### The following is a single set of images test #####
 

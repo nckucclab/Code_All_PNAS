@@ -3,13 +3,13 @@
 * by C. Y. Cyrus Chu, Academia Sinica; 
 *    Juin-Jen Chang, Academia Sinica; 
 *    Chang-Ching Lin, National Cheng Kung University.
-* Sep. 18, 2024.
+* Mar. 31, 2025.
 * Submit to PNAS
 *
-* Stata Code "Table_C_SR.do" 
+* Stata Code "Table_S3_SR.do" 
 *   is used to report Governments’ Technological Capacities 
 *   for Various Democracy Groups
-*   in Table C in Appendix C of Supporting Information A.
+*   in Table S3 in Appendix S3 of Supporting Information A.
 *
 ************************************************************
 
