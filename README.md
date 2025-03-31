@@ -2,11 +2,11 @@ Why Does Artificial Intelligence Hinder Democratization?
 
 by
 
-C. Y. Cyrus Chu, Academia Sinica; 
+      C. Y. Cyrus Chu, Academia Sinica; 
 
-Juin-Jen Chang, Academia Sinica; 
+      Juin-Jen Chang, Academia Sinica; 
 
-Chang-Ching Lin, National Cheng Kung University.
+      Chang-Ching Lin, National Cheng Kung University.
 Mar. 31, 2025.
 
 Submit to PNAS
