@@ -168,13 +168,7 @@ colors = {
     'Group4': 'Reds' # Hight-scoring group
 }
 
-# Adjust picture size(cm/2.54)
-fig, axs = plt.subplots(3, 2, figsize=(17.8/2.54, 19/2.54))
-
-
-# Adjust circle diameter range
-circle_min = 2
-circle_max = 200
+fig, axs = plt.subplots(3, 2, figsize=(17.8/2.54, 22.5/2.54))
 
 # axs[0, 0].scatter(FH[i], Internet[i], s=sizes[i], color=cmap(norm(years[i])), alpha=0.9, edgecolors='w', linewidth=0.5)
 # axs[0, 0].set_xlabel('PR')
@@ -186,7 +180,7 @@ for group, group_data in data221p.items():
     FH = group_data['political_rights']
     Internet = group_data['internet_Filtering']
     years = group_data['years']
-    sizes = np.linspace(circle_min, circle_max, len(years))  # Adjust circle diameter range
+    sizes = np.linspace(5, 300, len(years))  # Adjust circle diameter range
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -207,7 +201,7 @@ for group, group_data in data223p.items():
     FH = group_data['political_rights']
     Internet = group_data['internet_shut_down']
     years = group_data['years']
-    sizes = np.linspace(circle_min, circle_max, len(years))
+    sizes = np.linspace(5, 300, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -226,7 +220,7 @@ for group, group_data in data229p.items():
     FH = group_data['political_rights']
     Internet = group_data['cyber_security_capacity']
     years = group_data['years']
-    sizes = np.linspace(circle_min, circle_max, len(years))
+    sizes = np.linspace(5, 300, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -246,7 +240,7 @@ for group, group_data in data221e.items():
     FH = group_data['democracy_index']
     Internet = group_data['internet_Filtering']
     years = group_data['years']
-    sizes = np.linspace(circle_min, circle_max, len(years))
+    sizes = np.linspace(5, 300, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -258,8 +252,6 @@ axs[0, 1].set_xlabel("EIU' s Democracy Index")
 axs[0, 1].set_ylabel("Content Filtering (CF) Capacity")
 # axs[0, 1].set_xlim(-0.25, 0.2)
 # axs[0, 1].set_ylim(-1, 1.25)
-axs[0, 1].set_xlim(-0.25, 0.18)
-axs[0, 1].set_xticks(np.arange(-0.20, 0.16, 0.05))
 axs[0, 1].grid(True)
 
 #223e
@@ -267,7 +259,7 @@ for group, group_data in data223e.items():
     FH = group_data['democracy_index']
     Internet = group_data['internet_shut_down']
     years = group_data['years']
-    sizes = np.linspace(circle_min, circle_max, len(years))
+    sizes = np.linspace(5, 300, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -279,8 +271,6 @@ axs[1, 1].set_xlabel("EIU' s Democracy Index")
 axs[1, 1].set_ylabel("Internet Shut Down (SD) Capacity")
 # axs[1, 1].set_xlim(-0.25, 0.2)
 # axs[1, 1].set_ylim(-1, 1.25)
-axs[1, 1].set_xlim(-0.25, 0.18)
-axs[1, 1].set_xticks(np.arange(-0.20, 0.16, 0.05))
 axs[1, 1].grid(True)
 
 #229e
@@ -288,7 +278,7 @@ for group, group_data in data229e.items():
     FH = group_data['democracy_index']
     Internet = group_data['cyber_security_capacity']
     years = group_data['years']
-    sizes = np.linspace(circle_min, circle_max, len(years))
+    sizes = np.linspace(5, 300, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -300,8 +290,6 @@ axs[2, 1].set_xlabel("EIU' s Democracy Index")
 axs[2, 1].set_ylabel("Cyber Security (CS) Capacity ")
 # axs[2, 1].set_xlim(-0.25, 0.2)
 # axs[2, 1].set_ylim(-1, 1.25)
-axs[2, 1].set_xlim(-0.25, 0.18)
-axs[2, 1].set_xticks(np.arange(-0.20, 0.16, 0.05))
 axs[2, 1].grid(True)
 
 plt.tight_layout()
@@ -351,12 +339,10 @@ for group, group_data in data229e.items():
 
 plt.xlabel("EIU' s Democracy Index")
 plt.ylabel("Cyber Security Capacity")
-axs[2, 1].set_xlim(-0.25, 0.18)
-axs[2, 1].set_xticks(np.arange(-0.20, 0.16, 0.05))
-
+plt.xlim(-0.25, 0.25)
 # plt.ylim(-1, 1.2)
 #plt.title("Political Rights vs Internet Shut Down Capacity (2006-2023)")
 
 plt.grid(True)
-# plt.savefig('data229ep.png')
+plt.savefig('data229ep.png')
 plt.show()
