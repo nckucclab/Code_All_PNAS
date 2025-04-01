@@ -9,7 +9,7 @@
 * Stata Code "FigureS1.do" is used for Figure S1 
 *      "Governments’ Technological Capacities for 
 *       the Least (Blue) and Most (Red) Democratic Groups" in Appendix C of Supporting Information A.    
-* Then, run Python code "Figure S1.py" in the fold "Figure1_S1" to generate Figure S1.
+* Then, run Python code "Figure S1.py" in the fold "Figure2_S1" to generate Figure S1.
 *
 ************************************************************
 
@@ -53,7 +53,7 @@ sort QQ year
 save "EIU_FigureS1.dta", replace
 *** 
 
-* export excel using "EIU_FigureA1.xls", firstrow(variables) replace
+* export excel using "EIU_FigureS1.xls", firstrow(variables) replace
 
 *********************************************************************
 
@@ -94,11 +94,11 @@ sort QQ year
 save "PR_FigureS1.dta", replace
 ***
 
-* export excel using "PR_FigureA1.xls", firstrow(variables) replace
+* export excel using "PR_FigureS1.xls", firstrow(variables) replace
 
 *****
 * Then, combine these two files and save as FigureA1.xlsx
-*   and run Python code "Figure A1.py" in the fold "Figure2_AI" to plot the average values of various capacities and democracy indices for each year.
+*   and run Python code "Figure S1.py" in the fold "Figure2_S1" to plot the average values of various capacities and democracy indices for each year.
 *****
 
 clear

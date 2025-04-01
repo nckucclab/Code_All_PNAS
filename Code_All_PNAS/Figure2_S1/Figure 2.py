@@ -166,7 +166,12 @@ colors = {
 #    'Group4': 'Reds'
 }
 
-fig, axs = plt.subplots(3, 2, figsize=(17.8/2.54, 22.5/2.54))
+# Adjust picture size(cm/2.54)
+fig, axs = plt.subplots(3, 2, figsize=(17.8/2.54, 19/2.54))
+
+# Adjust circle diameter range
+circle_min = 2
+circle_max = 200
 
 # axs[0, 0].scatter(FH[i], Internet[i], s=sizes[i], color=cmap(norm(years[i])), alpha=0.9, edgecolors='w', linewidth=0.5)
 # axs[0, 0].set_xlabel('PR')
@@ -178,7 +183,7 @@ for group, group_data in data221p.items():
     FH = group_data['political_rights']
     Internet = group_data['internet_Filtering']
     years = group_data['years']
-    sizes = np.linspace(5, 300, len(years))  # Adjust circle diameter range
+    sizes = np.linspace(circle_min, circle_max, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -199,7 +204,7 @@ for group, group_data in data223p.items():
     FH = group_data['political_rights']
     Internet = group_data['internet_shut_down']
     years = group_data['years']
-    sizes = np.linspace(5, 300, len(years))
+    sizes = np.linspace(circle_min, circle_max, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -218,7 +223,7 @@ for group, group_data in data229p.items():
     FH = group_data['political_rights']
     Internet = group_data['cyber_security_capacity']
     years = group_data['years']
-    sizes = np.linspace(5, 300, len(years))
+    sizes = np.linspace(circle_min, circle_max, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -238,7 +243,7 @@ for group, group_data in data221e.items():
     FH = group_data['democracy_index']
     Internet = group_data['internet_Filtering']
     years = group_data['years']
-    sizes = np.linspace(5, 300, len(years))
+    sizes = np.linspace(circle_min, circle_max, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -257,7 +262,7 @@ for group, group_data in data223e.items():
     FH = group_data['democracy_index']
     Internet = group_data['internet_shut_down']
     years = group_data['years']
-    sizes = np.linspace(5, 300, len(years))
+    sizes = np.linspace(circle_min, circle_max, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())
@@ -276,7 +281,7 @@ for group, group_data in data229e.items():
     FH = group_data['democracy_index']
     Internet = group_data['cyber_security_capacity']
     years = group_data['years']
-    sizes = np.linspace(5, 300, len(years))
+    sizes = np.linspace(circle_min, circle_max, len(years))
    
     cmap = plt.get_cmap(colors[group])
     norm = plt.Normalize(years.min(), years.max())

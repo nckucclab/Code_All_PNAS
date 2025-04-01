@@ -9,7 +9,7 @@
 * Stata Code "Table_S3_SR.do" 
 *   is used to report Governments’ Technological Capacities 
 *   for Various Democracy Groups
-*   in Table S3 in Appendix S3 of Supporting Information A.
+*   in Table S3 in Appendix C of Supporting Information A.
 *
 ************************************************************
 
