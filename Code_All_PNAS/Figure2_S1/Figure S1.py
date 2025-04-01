@@ -171,6 +171,7 @@ colors = {
 # Adjust picture size(cm/2.54)
 fig, axs = plt.subplots(3, 2, figsize=(17.8/2.54, 19/2.54))
 
+
 # Adjust circle diameter range
 circle_min = 2
 circle_max = 200
@@ -257,6 +258,8 @@ axs[0, 1].set_xlabel("EIU' s Democracy Index")
 axs[0, 1].set_ylabel("Content Filtering (CF) Capacity")
 # axs[0, 1].set_xlim(-0.25, 0.2)
 # axs[0, 1].set_ylim(-1, 1.25)
+axs[0, 1].set_xlim(-0.25, 0.18)
+axs[0, 1].set_xticks(np.arange(-0.20, 0.16, 0.05))
 axs[0, 1].grid(True)
 
 #223e
@@ -276,6 +279,8 @@ axs[1, 1].set_xlabel("EIU' s Democracy Index")
 axs[1, 1].set_ylabel("Internet Shut Down (SD) Capacity")
 # axs[1, 1].set_xlim(-0.25, 0.2)
 # axs[1, 1].set_ylim(-1, 1.25)
+axs[1, 1].set_xlim(-0.25, 0.18)
+axs[1, 1].set_xticks(np.arange(-0.20, 0.16, 0.05))
 axs[1, 1].grid(True)
 
 #229e
@@ -295,6 +300,8 @@ axs[2, 1].set_xlabel("EIU' s Democracy Index")
 axs[2, 1].set_ylabel("Cyber Security (CS) Capacity ")
 # axs[2, 1].set_xlim(-0.25, 0.2)
 # axs[2, 1].set_ylim(-1, 1.25)
+axs[2, 1].set_xlim(-0.25, 0.18)
+axs[2, 1].set_xticks(np.arange(-0.20, 0.16, 0.05))
 axs[2, 1].grid(True)
 
 plt.tight_layout()
@@ -344,10 +351,12 @@ for group, group_data in data229e.items():
 
 plt.xlabel("EIU' s Democracy Index")
 plt.ylabel("Cyber Security Capacity")
-plt.xlim(-0.25, 0.25)
+axs[2, 1].set_xlim(-0.25, 0.18)
+axs[2, 1].set_xticks(np.arange(-0.20, 0.16, 0.05))
+
 # plt.ylim(-1, 1.2)
 #plt.title("Political Rights vs Internet Shut Down Capacity (2006-2023)")
 
 plt.grid(True)
-plt.savefig('data229ep.png')
+# plt.savefig('data229ep.png')
 plt.show()
